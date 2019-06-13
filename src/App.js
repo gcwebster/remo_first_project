@@ -4,15 +4,15 @@ import './styles/main.scss';
 
 console.log(greeting('George'));
 
+function App() {
+    return (
+        <div>
+            <p>HELLO</p>
+            <Welcome />
+        </div>
+    );
+    //console.log(greeting('George'));
+}
 
 export default App;
 
-// function App() {
-//     return (
-//         <div>
-//             <p>HELLO</p>
-//             <Welcome />
-//         </div>
-//     );
-//     //console.log(greeting('George'));
-// }
