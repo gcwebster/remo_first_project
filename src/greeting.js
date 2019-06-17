@@ -1,5 +1,5 @@
-const greeting = (name) => {
-    return `hi, ${name}`;
+function Greeting() {
+    return <p>`hi, ${name}`</p>;
 }
 
-export { greeting }
+export default Greeting 
