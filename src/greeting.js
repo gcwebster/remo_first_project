@@ -1,5 +1,5 @@
-function Greeting() {
-    return <p>`hi, ${name}`</p>;
+function Greeting(props) {
+    return <p>Hi, {props.name}</p>;
 }
 
-export default Greeting 
+export { Greeting } 
