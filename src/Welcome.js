@@ -1,4 +1,4 @@
-import src from './images/Kilimanjaro2.jpg';
+import src from './images/Kilimanjaro2.jpg'
 class Welcome extends React.Component {
     render() {
         return (
@@ -7,8 +7,8 @@ class Welcome extends React.Component {
                 <img src={src} />
                 <img src="./images/Kilimanjaro.jpg" />
             </div>
-        );
+        )
     }
 }
 
-export { Welcome };
+export { Welcome }

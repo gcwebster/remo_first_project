@@ -1,7 +1,6 @@
-import { Greeting } from './Greeting';
-import { Welcome } from './Welcome';
-import './styles/main.scss';
-
+import { Greeting } from './Greeting'
+import { Welcome } from './Welcome'
+import './styles/main.scss'
 
 class App extends React.Component {
     render() {
@@ -10,10 +9,9 @@ class App extends React.Component {
                 <p>This is coming from inside the app component</p>
                 <Greeting name="George" />
             </div >
-        );
+        )
     }
-    //console.log(greeting('George'));
+    // console.log(greeting('George'));
 }
 
-export default App;
-
+export default App
