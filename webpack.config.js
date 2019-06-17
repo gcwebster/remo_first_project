@@ -1,21 +1,21 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require("webpack");
+const HtmlWebPackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack')
 
 module.exports = {
-    mode: "production",
+    mode: 'production',
     module: {
         rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: 'babel-loader'
             },
             {
                 test: /\.html$/,
                 use: [
                     {
-                        loader: "html-loader",
+                        loader: 'html-loader',
                         options: { minimize: true }
                     }
                 ]
@@ -29,26 +29,26 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
                 ]
             }
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: "./src/index.html",
-            filename: "./index.html"
+            template: './src/index.html',
+            filename: './index.html'
         }),
         new MiniCssExtractPlugin({
             // These options are similar to the same ones in webpack.output
             // Both of these are optional.
-            filename: "[name].css",
-            chunkFilename: "[id].css"
+            filename: '[name].css',
+            chunkFilename: '[id].css'
         }),
         new webpack.ProvidePlugin({
-            "React": "react",
+            'React': 'react'
         })
     ]
 }
