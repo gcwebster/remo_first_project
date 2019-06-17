@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack");
 
 module.exports = {
     mode: "production",
@@ -45,6 +46,9 @@ module.exports = {
             // Both of these are optional.
             filename: "[name].css",
             chunkFilename: "[id].css"
-        })
+        }),
+        new webpack.ProvidePlugin({
+            "React": "react",
+        }),
     ]
 }
