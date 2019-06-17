@@ -3,14 +3,16 @@ import { Welcome } from './Welcome';
 import './styles/main.scss';
 
 
-function App() {
-    return (
-        <div>
-            <p>HELLO</p>
-            <Welcome />
-            <p>please change!!</p>
-        </div>
-    );
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <p>HELLO</p>
+                <Welcome />
+                <p>please change!!</p>
+            </div >
+        );
+    }
     //console.log(greeting('George'));
 }
 

@@ -1,6 +1,9 @@
-function Welcome() {
-    return (<h1>Welcome</h1>);
-    // console.log("Should have been able to use Welcome components");
+class Welcome extends React.Component {
+    render() {
+        return (
+            <h1>Welcome</h1>
+        );
+    }
 }
 
-export default Welcome;
+export { Welcome };
