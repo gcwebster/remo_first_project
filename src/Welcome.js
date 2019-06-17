@@ -1,7 +1,7 @@
 class Welcome extends React.Component {
     render() {
         return (
-            <h1>Welcome</h1>
+            <p>This is coming from inside the welcome component</p>
         );
     }
 }

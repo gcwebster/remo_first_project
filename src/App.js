@@ -7,9 +7,8 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <p>HELLO</p>
+                <p>This is coming from inside the app component</p>
                 <Welcome />
-                <p>please change!!</p>
             </div >
         );
     }
