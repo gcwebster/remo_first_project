@@ -8,12 +8,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    query: {
-                        presets: ['@babel/react', '@babel/es2015']
-                    },
-                    loader: "babel-loader"
-                }
+                loader: "babel-loader"
             },
             {
                 test: /\.html$/,
