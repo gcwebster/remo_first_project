@@ -1,5 +1,6 @@
 import { Greeting } from './Greeting'
 import { Welcome } from './Welcome'
+import { Counter } from './Counter'
 import './styles/main.scss'
 
 class App extends React.Component {
@@ -8,6 +9,7 @@ class App extends React.Component {
             <div>
                 <p>This is coming from inside the app component</p>
                 <Greeting name="George" />
+                <Counter />
             </div >
         )
     }

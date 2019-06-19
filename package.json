@@ -10,7 +10,8 @@
     "build": "webpack",
     "start:dev": "webpack-dev-server",
     "lint": "npx eslint src",
-    "lint:fix": "npx eslint src --fix"
+    "lint:fix": "npx eslint src --fix",
+    "test": "jest"
   },
   "keywords": [],
   "author": "George Webster",
@@ -47,6 +48,7 @@
     "webpack-dev-server": "^3.7.1"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "babel-plugin-transform-react-jsx-img-import": "^0.1.4",
     "open": "^6.3.0",
     "react": "^16.8.6",
