@@ -20,15 +20,9 @@ const routing = (
                 </Link>
             </ul>
             <Route exact path="/" component={App} />
-            <Route path="/greeting" render={(routeProps) => (<Greeting {...routeProps} {...name = "George"} />)} />
+            <Route path="/greeting" component={Greeting} />
             <Route path="/counter" component={Counter} />
         </div>
     </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'))
-
-// import React from 'react'
-// import ReactDOM from 'react-dom'
-// import App from './App'
-
-// ReactDOM.render(<App />, document.getElementById('root'))
