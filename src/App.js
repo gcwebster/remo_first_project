@@ -12,6 +12,7 @@ class App extends React.Component {
                 <p>This is coming from inside the app component</p>
                 <Greeting name="George" />
                 <Counter />
+                <img src={require('./images/Kilimanjaro.jpg')} />
             </div >
         )
     }

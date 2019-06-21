@@ -2,9 +2,39 @@ $bg: lightblue;
 
 body {
     background-color: $bg;
+    margin: 0;
 }
 
 img {
     height: 200px;
     width: 300px;
+}
+
+ul {
+    background-color: white;
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+a {
+    color: black;
+    li {
+        background-color: white;
+        padding: 10px;
+        display: inline-block;
+    }
+}
+
+a:hover{
+    color: white;
+    li {
+    background-color: black;
+    }
+}
+
+a:active{
+    color: white;
 }
