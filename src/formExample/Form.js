@@ -1,4 +1,4 @@
-import './styles/form.scss';
+import '../styles/form.scss';
 import React from "react";
 import { DisplayFormikState } from './helper';
 import { Formik } from 'formik';
