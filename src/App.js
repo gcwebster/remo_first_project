@@ -1,6 +1,3 @@
-import { Greeting } from './Greeting'
-import { Welcome } from './Welcome'
-import { Counter } from './Counter'
 import { LandingPage } from './LandingPage'
 import './styles/main.scss'
 

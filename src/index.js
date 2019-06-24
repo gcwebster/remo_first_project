@@ -4,9 +4,9 @@ import './styles/main.scss'
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
 import { Greeting } from './Greeting'
-import { Counter } from './Counter'
+import { Counter } from './Counter/Counter'
 import { News } from './News'
-import { Form } from './Form'
+import { Form } from './formExample/Form'
 const routing = (
     <Router>
         <div>
