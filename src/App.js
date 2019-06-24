@@ -11,7 +11,6 @@ class App extends React.Component {
             </div >
         )
     }
-    // console.log(greeting('George'));
 }
 
 export default App
