@@ -5,6 +5,8 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
 import { Greeting } from './Greeting'
 import { Counter } from './Counter'
+import { News } from './News'
+import { Form } from './Form'
 const routing = (
     <Router>
         <div>
@@ -18,10 +20,18 @@ const routing = (
                 <Link to="/counter">
                     <li>Counter</li>
                 </Link>
+                <Link to="/news">
+                    <li>News</li>
+                </Link>
+                <Link to="/form">
+                    <li>Form</li>
+                </Link>
             </ul>
             <Route exact path="/" component={App} />
             <Route path="/greeting" component={Greeting} />
             <Route path="/counter" component={Counter} />
+            <Route path="/news" component={News} />
+            <Route path="/form" component={Form} />
         </div>
     </Router>
 )

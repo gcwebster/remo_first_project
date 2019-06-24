@@ -9,9 +9,7 @@ class App extends React.Component {
         return (
             <div>
                 <LandingPage name={"George"} />
-                <p>This is coming from inside the app component</p>
-                <Greeting name="George" />
-                <Counter />
+                <p>Landing page</p>
                 <img src={require('./images/Kilimanjaro.jpg')} />
             </div >
         )
