@@ -3,8 +3,9 @@ import React from "react";
 import { DisplayFormikState } from './helper';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { FormElement } from './FormElement';
 
-class FormExample extends React.Component {
+class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,7 +16,7 @@ class FormExample extends React.Component {
     render() {
         return (
             <div>
-                <h2>This is an EXAMPLE form</h2>
+                <h2>This form will validate an email using Formik</h2>
                 <p>Try to enter an email below:</p>
 
                 <Formik
@@ -46,6 +47,22 @@ class FormExample extends React.Component {
                         } = props;
                         return (
                             <form onSubmit={handleSubmit}>
+                                <FormElement elementId={"firstName"} title={"First name"} />
+                                <input
+                                    id="firstName"
+                                    placeholder="Enter your first name"
+                                    type="text"
+                                    value={values.firstName}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    className={
+                                        errors.firstName && touched.firstName ? 'text-input error' : 'text-input'
+                                    }
+                                />
+                                {errors.firstName && touched.firstName && (
+                                    <div className="input-feedback">{errors.firstName}</div>
+                                )}
+                                <div />
                                 <label htmlFor="email" style={{ display: 'block' }}>
                                     Email
                                 </label>
@@ -89,4 +106,4 @@ class FormExample extends React.Component {
     }
 }
 
-export { FormExample }
+export { Form }
