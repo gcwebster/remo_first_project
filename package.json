@@ -7,7 +7,7 @@
     "./dist/main.js"
   ],
   "scripts": {
-    "build": "webpack",
+    "build": "rm -rf dist && webpack",
     "start:dev": "webpack-dev-server",
     "lint": "npx eslint src",
     "lint:fix": "npx eslint src --fix",

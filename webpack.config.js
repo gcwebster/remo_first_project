@@ -1,11 +1,13 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const webpack = require('webpack')
+const path = require('path');
 
 module.exports = {
     mode: 'production',
     output: {
-        publicPath: '/'
+        publicPath: '/',
+        filename: '[name].[hash].js'
     },
     module: {
         rules: [
