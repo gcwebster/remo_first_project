@@ -6,3 +6,17 @@
 .hidden{
     display: none;
 }
+
+.text-input:focus{
+    border: 1px solid blue;
+
+}
+
+.text-input.error{
+    border: 2px solid red;
+}
+
+.input-feedback{
+    color:red;
+    background-color:white
+}

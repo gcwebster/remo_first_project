@@ -30,7 +30,11 @@ class Form extends React.Component {
                     validationSchema={Yup.object().shape({
                         email: Yup.string()
                             .email()
-                            .required('Required'),
+                            .required('Email is required'),
+                        firstName: Yup.string()
+                            .min(2, 'Too short')
+                            .max(50, 'too long')
+                            .required('First name is required'),
                     })}
                 >
                     {props => {
@@ -47,39 +51,32 @@ class Form extends React.Component {
                         } = props;
                         return (
                             <form onSubmit={handleSubmit}>
-                                <FormElement elementId={"firstName"} title={"First name"} />
-                                <input
-                                    id="firstName"
-                                    placeholder="Enter your first name"
-                                    type="text"
-                                    value={values.firstName}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    className={
-                                        errors.firstName && touched.firstName ? 'text-input error' : 'text-input'
-                                    }
+                                <FormElement
+                                    elementId={"firstName"}
+                                    title={"First name"}
+                                    values={values.firstName}
+                                    handleChange={handleChange}
+                                    handleBlur={handleBlur}
+                                    errors={errors.firstName}
+                                    touched={touched.firstName}
                                 />
-                                {errors.firstName && touched.firstName && (
-                                    <div className="input-feedback">{errors.firstName}</div>
-                                )}
+
                                 <div />
-                                <label htmlFor="email" style={{ display: 'block' }}>
-                                    Email
-                                </label>
-                                <input
-                                    id="email"
-                                    placeholder="Enter your email"
-                                    type="text"
-                                    value={values.email}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    className={
-                                        errors.email && touched.email ? 'text-input error' : 'text-input'
-                                    }
+
+                                <FormElement
+                                    elementId={"email"}
+                                    title={"email"}
+                                    values={values.email}
+                                    handleChange={handleChange}
+                                    handleBlur={handleBlur}
+                                    errors={errors.email}
+                                    touched={touched.email}
                                 />
-                                {errors.email && touched.email && (
-                                    <div className="input-feedback">{errors.email}</div>
-                                )}
+
+
+
+
+
 
                                 <button
                                     type="button"
@@ -101,7 +98,7 @@ class Form extends React.Component {
                         );
                     }}
                 </Formik>
-            </div>
+            </div >
         )
     }
 }
