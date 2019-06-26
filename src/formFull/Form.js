@@ -68,7 +68,6 @@ class Form extends React.Component {
                             <form onSubmit={handleSubmit}>
                                 <FormTextInputElement
                                     elementId={"firstName"}
-                                    title={"First name"}
                                     values={values.firstName}
                                     handleChange={handleChange}
                                     handleBlur={handleBlur}
@@ -79,7 +78,6 @@ class Form extends React.Component {
 
                                 <FormTextInputElement
                                     elementId={"lastName"}
-                                    title={"Last name"}
                                     values={values.lastName}
                                     handleChange={handleChange}
                                     handleBlur={handleBlur}
@@ -90,7 +88,6 @@ class Form extends React.Component {
 
                                 <FormTextInputElement
                                     elementId={"email"}
-                                    title={"Email"}
                                     values={values.email}
                                     handleChange={handleChange}
                                     handleBlur={handleBlur}
@@ -101,7 +98,6 @@ class Form extends React.Component {
 
                                 <FormTextInputElement
                                     elementId={"age"}
-                                    title={"Age"}
                                     values={values.age}
                                     handleChange={handleChange}
                                     handleBlur={handleBlur}
@@ -112,7 +108,6 @@ class Form extends React.Component {
 
                                 <FormDropdownInputElement
                                     elementId={"colour"}
-                                    title={"colour"}
                                     values={values.colour}
                                     handleChange={handleChange}
                                     handleBlur={handleBlur}
