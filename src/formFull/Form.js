@@ -47,8 +47,8 @@ class Form extends React.Component {
                             .min(18, 'You must be older than 18')
                             .max(110, 'Enter your actual age')
                             .required(' Age is required'),
-                        colour: Yup.string()
-                            .required('Choose a colour')
+                        gender: Yup.string()
+                            .required('Select your gender')
 
                     })}
                 >
@@ -111,18 +111,17 @@ class Form extends React.Component {
                                 <div />
 
                                 <FormDropdownInputElement
-                                    elementId={"colour"}
-                                    title={"Colour"}
-                                    label={"Select a colour"}
-                                    values={values.colour}
+                                    elementId={"gender"}
+                                    title={"Gender"}
+                                    label={"Select your gender"}
+                                    values={values.gender}
                                     handleChange={handleChange}
                                     handleBlur={handleBlur}
-                                    errors={errors.colour}
-                                    touched={touched.colour}
+                                    errors={errors.gender}
+                                    touched={touched.gender}
                                     options={[
-                                        "red",
-                                        "blue",
-                                        "green"
+                                        "Male",
+                                        "Female"
                                     ]}
                                 />
 
