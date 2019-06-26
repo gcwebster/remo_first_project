@@ -4,8 +4,12 @@ import { DisplayFormikState } from './helper';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { FormTextInputElement } from './FormTextInputElement';
+import { FormDropdownInputElement } from './FormDropdownInputElement';
 
-
+/*
+ToDo:
+- Fix bug where on reset button click page disappears.
+*/
 class Form extends React.Component {
     constructor(props) {
         super(props);
@@ -43,6 +47,8 @@ class Form extends React.Component {
                             .min(18, 'You must be older than 18')
                             .max(110, 'Enter your actual age')
                             .required(' Age is required'),
+                        colour: Yup.string()
+                            .required('Choose a colour')
 
                     })}
                 >
@@ -104,23 +110,15 @@ class Form extends React.Component {
                                 />
                                 <div />
 
-                                <select
-                                    name="color"
-                                    value={values.color}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    style={{ display: 'block' }}
-                                >
-                                    <option value="" label="Select a color" />
-                                    <option value="red" label="red" />
-                                    <option value="blue" label="blue" />
-                                    <option value="green" label="green" />
-                                </select>
-                                {errors.color &&
-                                    touched.color &&
-                                    <div className="input-feedback">
-                                        {errors.color}
-                                    </div>}
+                                <FormDropdownInputElement
+                                    elementId={"colour"}
+                                    title={"colour"}
+                                    values={values.colour}
+                                    handleChange={handleChange}
+                                    handleBlur={handleBlur}
+                                    errors={errors.colour}
+                                    touched={touched.colour}
+                                />
 
 
 
