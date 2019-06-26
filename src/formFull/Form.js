@@ -3,7 +3,8 @@ import React from "react";
 import { DisplayFormikState } from './helper';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { FormElement } from './FormTextInputElement';
+import { FormTextInputElement } from './FormTextInputElement';
+
 
 class Form extends React.Component {
     constructor(props) {
@@ -59,7 +60,7 @@ class Form extends React.Component {
                         } = props;
                         return (
                             <form onSubmit={handleSubmit}>
-                                <FormElement
+                                <FormTextInputElement
                                     elementId={"firstName"}
                                     title={"First name"}
                                     values={values.firstName}
@@ -70,7 +71,7 @@ class Form extends React.Component {
                                 />
                                 <div />
 
-                                <FormElement
+                                <FormTextInputElement
                                     elementId={"lastName"}
                                     title={"Last name"}
                                     values={values.lastName}
@@ -81,7 +82,7 @@ class Form extends React.Component {
                                 />
                                 <div />
 
-                                <FormElement
+                                <FormTextInputElement
                                     elementId={"email"}
                                     title={"Email"}
                                     values={values.email}
@@ -92,7 +93,7 @@ class Form extends React.Component {
                                 />
                                 <div />
 
-                                <FormElement
+                                <FormTextInputElement
                                     elementId={"age"}
                                     title={"Age"}
                                     values={values.age}
