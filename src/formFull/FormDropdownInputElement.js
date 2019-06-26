@@ -3,6 +3,9 @@ import { FormElementError } from "./FormElementError";
 function FormDropdownInputElement(props) {
     return (
         <>
+            <label htmlFor={props.elementId} style={{ display: 'block' }}>
+                {props.title}
+            </label>
             <select
                 name={props.elementId}
                 value={props.values}
@@ -10,7 +13,7 @@ function FormDropdownInputElement(props) {
                 onBlur={props.handleBlur}
                 style={{ display: 'block' }}
             >
-                <option value="" label="Select a colour" />
+                <option value="" label={props.label} />
                 <option value="red" label="red" />
                 <option value="blue" label="blue" />
                 <option value="green" label="green" />

@@ -112,15 +112,14 @@ class Form extends React.Component {
 
                                 <FormDropdownInputElement
                                     elementId={"colour"}
-                                    title={"colour"}
+                                    title={"Colour"}
+                                    label={"Select a colour"}
                                     values={values.colour}
                                     handleChange={handleChange}
                                     handleBlur={handleBlur}
                                     errors={errors.colour}
                                     touched={touched.colour}
                                 />
-
-
 
                                 <button
                                     type="button"
