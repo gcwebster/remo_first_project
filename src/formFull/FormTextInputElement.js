@@ -1,6 +1,6 @@
 import { FormElementError } from "./FormElementError";
 
-function FormElement(props) {
+function FormTextInputElement(props) {
     return (
         <>
             <label htmlFor={props.elementId} style={{ display: 'block' }}>
@@ -21,4 +21,4 @@ function FormElement(props) {
     )
 }
 
-export { FormElement }
+export { FormTextInputElement }

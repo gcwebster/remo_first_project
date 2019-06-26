@@ -3,7 +3,7 @@ import React from "react";
 import { DisplayFormikState } from './helper';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { FormElement } from './FormElement';
+import { FormElement } from './FormTextInputElement';
 
 class Form extends React.Component {
     constructor(props) {
