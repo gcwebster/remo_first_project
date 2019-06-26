@@ -119,6 +119,11 @@ class Form extends React.Component {
                                     handleBlur={handleBlur}
                                     errors={errors.colour}
                                     touched={touched.colour}
+                                    options={[
+                                        "red",
+                                        "blue",
+                                        "green"
+                                    ]}
                                 />
 
                                 <button

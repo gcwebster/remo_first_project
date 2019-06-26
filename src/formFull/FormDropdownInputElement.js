@@ -13,14 +13,18 @@ function FormDropdownInputElement(props) {
                 style={{ display: 'block' }}
             >
                 <option value="" label={props.label} />
-                <option value="red" label="red" />
-                <option value="blue" label="blue" />
-                <option value="green" label="green" />
-                <option value="3" label="3" />
+                {displayOptions(props.options)}
             </select>
             <FormElementError errors={props.errors} touched={props.touched} />
         </>
     )
 }
 
+function displayOptions(options) {
+    var arrayOfOptions = [];
+    for (var i = 0; i < options.length; i++) {
+        arrayOfOptions.push(<option value={options[i]} label={options[i]} />);
+    }
+    return arrayOfOptions;
+}
 export { FormDropdownInputElement }
