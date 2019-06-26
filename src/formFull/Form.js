@@ -20,7 +20,6 @@ class Form extends React.Component {
                 <p>Try to enter an email below:</p>
 
                 <Formik
-                    initialValues={{ email: '' }}
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
                             alert(JSON.stringify(values, null, 2));
@@ -28,13 +27,22 @@ class Form extends React.Component {
                         }, 500);
                     }}
                     validationSchema={Yup.object().shape({
-                        email: Yup.string()
-                            .email()
-                            .required('Email is required'),
                         firstName: Yup.string()
                             .min(2, 'Too short')
                             .max(50, 'too long')
                             .required('First name is required'),
+                        lastName: Yup.string()
+                            .min(2, 'Too short')
+                            .max(50, 'too long')
+                            .required('Last name is required'),
+                        email: Yup.string()
+                            .email()
+                            .required('Email is required'),
+                        age: Yup.number()
+                            .min(18, 'You must be older than 18')
+                            .max(110, 'Enter your actual age')
+                            .required(' Age is required'),
+
                     })}
                 >
                     {props => {
@@ -60,21 +68,58 @@ class Form extends React.Component {
                                     errors={errors.firstName}
                                     touched={touched.firstName}
                                 />
+                                <div />
 
+                                <FormElement
+                                    elementId={"lastName"}
+                                    title={"Last name"}
+                                    values={values.lastName}
+                                    handleChange={handleChange}
+                                    handleBlur={handleBlur}
+                                    errors={errors.lastName}
+                                    touched={touched.lastName}
+                                />
                                 <div />
 
                                 <FormElement
                                     elementId={"email"}
-                                    title={"email"}
+                                    title={"Email"}
                                     values={values.email}
                                     handleChange={handleChange}
                                     handleBlur={handleBlur}
                                     errors={errors.email}
                                     touched={touched.email}
                                 />
+                                <div />
 
+                                <FormElement
+                                    elementId={"age"}
+                                    title={"Age"}
+                                    values={values.age}
+                                    handleChange={handleChange}
+                                    handleBlur={handleBlur}
+                                    errors={errors.age}
+                                    touched={touched.age}
+                                />
+                                <div />
 
-
+                                <select
+                                    name="color"
+                                    value={values.color}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    style={{ display: 'block' }}
+                                >
+                                    <option value="" label="Select a color" />
+                                    <option value="red" label="red" />
+                                    <option value="blue" label="blue" />
+                                    <option value="green" label="green" />
+                                </select>
+                                {errors.color &&
+                                    touched.color &&
+                                    <div className="input-feedback">
+                                        {errors.color}
+                                    </div>}
 
 
 
