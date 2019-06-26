@@ -1,11 +1,10 @@
 import { FormElementError } from "./FormElementError";
+import { FormElementLabel } from "./FormElementLabel";
 
 function FormDropdownInputElement(props) {
     return (
         <>
-            <label htmlFor={props.elementId} style={{ display: 'block' }}>
-                {props.title}
-            </label>
+            <FormElementLabel elementId={props.elementId} title={props.title} />
             <select
                 name={props.elementId}
                 value={props.values}

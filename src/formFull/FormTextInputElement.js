@@ -1,11 +1,12 @@
 import { FormElementError } from "./FormElementError";
+import { FormElementLabel } from "./FormElementLabel";
+
 
 function FormTextInputElement(props) {
     return (
         <>
-            <label htmlFor={props.elementId} style={{ display: 'block' }}>
-                {props.title}
-            </label>
+            <FormElementLabel elementId={props.elementId} title={props.title} />
+
             <input
                 id={props.elementId}
                 type="text"
