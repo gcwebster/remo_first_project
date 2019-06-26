@@ -1,3 +1,5 @@
+import { FormElementError } from "./FormElementError";
+
 function FormElement(props) {
     return (
         <>
@@ -6,7 +8,6 @@ function FormElement(props) {
             </label>
             <input
                 id={props.elementId}
-                placeholder={'Enter your ' + props.title}
                 type="text"
                 value={props.values}
                 onChange={props.handleChange}
@@ -15,9 +16,7 @@ function FormElement(props) {
                     props.errors && props.touched ? 'text-input error' : 'text-input'
                 }
             />
-            {props.errors && props.touched && (
-                <div className="input-feedback">{props.errors}</div>
-            )}
+            <FormElementError errors={props.errors} touched={props.touched} />
         </>
     )
 }
