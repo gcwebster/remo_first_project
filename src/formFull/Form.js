@@ -5,6 +5,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { FormTextInputElement } from './FormTextInputElement';
 import { FormDropdownInputElement } from './FormDropdownInputElement';
+import { FormRadioInputElement } from './FormRadioInputElement';
 
 /*
 ToDo:
@@ -48,7 +49,9 @@ class Form extends React.Component {
                             .max(110, 'Enter your actual age')
                             .required(' Age is required'),
                         gender: Yup.string()
-                            .required('Select your gender')
+                            .required('Select your gender'),
+                        hobbies: Yup.string()
+                            .required('Select your hobbies')
 
                     })}
                 >
@@ -124,6 +127,27 @@ class Form extends React.Component {
                                         "Female"
                                     ]}
                                 />
+                                <div />
+
+                                <FormRadioInputElement
+                                    elementId={"hobbies"}
+                                    title={"Hobbies"}
+                                    label={"Select your hobbies"}
+                                    values={values.hobbies}
+                                    handleChange={handleChange}
+                                    handleBlur={handleBlur}
+                                    errors={errors.hobbies}
+                                    touched={touched.hobbies}
+                                    name={"hobbies"}
+                                    options={[
+                                        "kayaking",
+                                        "swimming",
+                                        "airsoft",
+                                        "polo"
+                                    ]}
+                                />
+                                <div />
+
 
                                 <button
                                     type="button"
