@@ -40,7 +40,7 @@
         "no-multiple-empty-lines": [
             "error",
             {
-                "max": 2
+                "max": 1
             }
         ]
     }

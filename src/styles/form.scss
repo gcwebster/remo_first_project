@@ -15,12 +15,13 @@
     display: inline-block;
 }
 
+.formElement{
+    padding: 10px 0;
+}
 
 .text-input:focus{
     border: 1px solid blue;
-
 }
-
 
 .text-input.error{
     border: 2px solid red;

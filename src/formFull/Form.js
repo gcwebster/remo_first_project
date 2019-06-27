@@ -83,7 +83,6 @@ class Form extends React.Component {
                                         touched={touched.firstName}
                                     />
 
-
                                     <FormElement
                                         type={'text'}
                                         elementId={'lastName'}
@@ -94,7 +93,6 @@ class Form extends React.Component {
                                         errors={errors.lastName}
                                         touched={touched.lastName}
                                     />
-
 
                                     <FormElement
                                         type={'text'}
@@ -107,7 +105,6 @@ class Form extends React.Component {
                                         touched={touched.email}
                                     />
 
-
                                     <FormElement
                                         type={'text'}
                                         elementId={'age'}
@@ -118,7 +115,6 @@ class Form extends React.Component {
                                         errors={errors.age}
                                         touched={touched.age}
                                     />
-
 
                                     <FormElement
                                         type={'dropdown'}
@@ -135,7 +131,6 @@ class Form extends React.Component {
                                             'Female'
                                         ]}
                                     />
-
 
                                     <FormElement
                                         type="radio"
@@ -155,7 +150,6 @@ class Form extends React.Component {
                                         ]}
                                     />
 
-
                                     <FormElement
                                         type={'checkbox'}
                                         elementId={'signUp'}
@@ -174,7 +168,6 @@ class Form extends React.Component {
                                         ]}
                                     />
 
-
                                     <FormElement
                                         type={'checkbox'}
                                         elementId={'terms'}
@@ -189,7 +182,6 @@ class Form extends React.Component {
                                             'I agree to the terms and conditions'
                                         ]}
                                     />
-
 
                                     <button
                                         type="button"
