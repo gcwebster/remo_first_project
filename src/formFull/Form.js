@@ -3,10 +3,7 @@ import React from "react";
 import { DisplayFormikState } from './helper';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { FormTextInputElement } from './FormTextInputElement';
-import { FormDropdownInputElement } from './FormDropdownInputElement';
-import { FormRadioInputElement } from './FormRadioInputElement';
-import { FormCheckboxInputElement } from './FormCheckboxInputElement';
+import { FormElement } from './FormElement';
 
 /*
 ToDo:
@@ -75,7 +72,8 @@ class Form extends React.Component {
                         return (
                             <form onSubmit={handleSubmit}>
                                 <div className="centerFormElement">
-                                    <FormTextInputElement
+                                    <FormElement
+                                        type={"text"}
                                         elementId={"firstName"}
                                         title={"First name"}
                                         values={values.firstName}
@@ -90,7 +88,8 @@ class Form extends React.Component {
 
                                 <div className="centerFormElement">
 
-                                    <FormTextInputElement
+                                    <FormElement
+                                        type={"text"}
                                         elementId={"lastName"}
                                         title={"Last name"}
                                         values={values.lastName}
@@ -105,7 +104,8 @@ class Form extends React.Component {
 
                                 <div className="centerFormElement">
 
-                                    <FormTextInputElement
+                                    <FormElement
+                                        type={"text"}
                                         elementId={"email"}
                                         title={"Email"}
                                         values={values.email}
@@ -119,7 +119,8 @@ class Form extends React.Component {
                                 <div />
 
                                 <div className="centerFormElement">
-                                    <FormTextInputElement
+                                    <FormElement
+                                        type={"text"}
                                         elementId={"age"}
                                         title={"Age"}
                                         values={values.age}
@@ -133,7 +134,8 @@ class Form extends React.Component {
                                 <div />
 
                                 <div className="centerFormElement">
-                                    <FormDropdownInputElement
+                                    <FormElement
+                                        type={"dropdown"}
                                         elementId={"gender"}
                                         title={"Gender"}
                                         label={"Select your gender"}
@@ -152,7 +154,8 @@ class Form extends React.Component {
                                 <div />
 
                                 <div className="centerFormElement">
-                                    <FormRadioInputElement
+                                    <FormElement
+                                        type="radio"
                                         elementId={"hobbies"}
                                         title={"Hobbies"}
                                         radioButtonGroup={"hobbies"}
@@ -173,7 +176,8 @@ class Form extends React.Component {
                                 <div />
 
                                 <div className="centerFormElement">
-                                    <FormCheckboxInputElement
+                                    <FormElement
+                                        type={"checkbox"}
                                         elementId={"signUp"}
                                         title={"Sign up"}
                                         checkboxButtonGroup={"signUp"}
@@ -194,7 +198,8 @@ class Form extends React.Component {
                                 <div />
 
                                 <div className="centerFormElement">
-                                    <FormCheckboxInputElement
+                                    <FormElement
+                                        type={"checkbox"}
                                         elementId={"terms"}
                                         title={"Terms and conditions"}
                                         checkboxButtonGroup={"terms"}

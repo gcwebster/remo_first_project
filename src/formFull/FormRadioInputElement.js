@@ -1,13 +1,7 @@
-import { FormElementLabel } from './FormElementLabel';
-import { FormElementError } from './FormElementError';
-
 function FormRadioInputElement(props) {
     return (
         <>
-            <FormElementLabel elementId={props.elementId} title={props.title} />
             {displayRadioButtons(props)}
-            <FormElementError errors={props.errors} touched={props.touched} />
-
         </>
     )
 }

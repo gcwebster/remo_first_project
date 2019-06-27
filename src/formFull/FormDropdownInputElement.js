@@ -1,10 +1,6 @@
-import { FormElementError } from "./FormElementError";
-import { FormElementLabel } from "./FormElementLabel";
-
 function FormDropdownInputElement(props) {
     return (
         <>
-            <FormElementLabel elementId={props.elementId} title={props.title} />
             <select
                 name={props.elementId}
                 value={props.values}
@@ -15,7 +11,6 @@ function FormDropdownInputElement(props) {
                 <option value="" label={props.label} />
                 {displayOptions(props.options)}
             </select>
-            <FormElementError errors={props.errors} touched={props.touched} />
         </>
     )
 }
