@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 
 class Counter extends Component {
-    state = {
-        count: 0
+    constructor(props) {
+        super(props)
+        state = {
+            count: 0
+        }
     }
 
     increment = () =>
