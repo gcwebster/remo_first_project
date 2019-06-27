@@ -106,7 +106,7 @@ class Form extends React.Component {
                                     />
 
                                     <FormElement
-                                        type={'text'}
+                                        type={'number'}
                                         elementId={'age'}
                                         title={'Age'}
                                         values={values.age}

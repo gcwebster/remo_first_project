@@ -5,6 +5,7 @@ import { FormCheckboxInputElement } from './FormInputElements/FormCheckboxInputE
 import { FormRadioInputElement } from './FormInputElements/FormRadioInputElement';
 import { FormDropdownInputElement } from './FormInputElements/FormDropdownInputElement';
 import { FormTextInputElement } from './FormInputElements/FormTextInputElement';
+import { FormNumericalInputElement } from './FormInputElements/FormNumericalInputElement';
 
 function FormElement(props) {
     return (
@@ -18,14 +19,16 @@ function FormElement(props) {
 
 function displayCorrectElement(props) {
     switch (props.type) {
-    case 'checkbox':
-        return (<FormCheckboxInputElement {...props} />);
-    case 'radio':
-        return (<FormRadioInputElement {...props} />);
-    case 'dropdown':
-        return (<FormDropdownInputElement {...props} />);
-    case 'text':
-        return (<FormTextInputElement {...props} />);
+        case 'checkbox':
+            return (<FormCheckboxInputElement {...props} />);
+        case 'radio':
+            return (<FormRadioInputElement {...props} />);
+        case 'dropdown':
+            return (<FormDropdownInputElement {...props} />);
+        case 'text':
+            return (<FormTextInputElement {...props} />);
+        case 'number':
+            return (<FormNumericalInputElement {...props} />);
     }
 }
 
