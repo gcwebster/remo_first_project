@@ -9,20 +9,24 @@
 
 .centerFormElement{
     text-align: center;
+    select{
+        display: inline-block;
+    }
 }
 
-.centerFormElement select{
-    display: inline-block;
-}
 
 .formElement{
     padding: 10px 0;
     display: block;
+    input[type="radio"]{
+        vertical-align: middle;
+    }
 }
 
 .formElementLabel{
     display:block;
 }
+
 
 .text-input:focus{
     border: 1px solid blue;
@@ -35,4 +39,18 @@
 .input-feedback{
     color:red;
     background-color:white
+}
+
+.testParent{
+    background-color: green;
+    display: block;
+    text-align: center;
+}
+
+.radioFormElement, .checkboxFormElement{
+    div{
+        text-align: left;
+        width: 150px;
+        margin: auto;
+    }
 }

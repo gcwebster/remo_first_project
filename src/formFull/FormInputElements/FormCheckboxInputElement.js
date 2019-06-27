@@ -1,8 +1,8 @@
 function FormCheckboxInputElement(props) {
     return (
-        <>
+        <div className="checkboxFormElement">
             {displayCheckboxes(props)}
-        </>
+        </div>
     )
 }
 
