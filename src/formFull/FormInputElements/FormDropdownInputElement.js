@@ -6,7 +6,6 @@ function FormDropdownInputElement(props) {
                 value={props.values}
                 onChange={props.handleChange}
                 onBlur={props.handleBlur}
-                style={{ display: 'block' }}
             >
                 <option value="" label={props.label} />
                 {displayOptions(props.options)}

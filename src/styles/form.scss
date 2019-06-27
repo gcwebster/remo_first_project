@@ -17,6 +17,11 @@
 
 .formElement{
     padding: 10px 0;
+    display: block;
+}
+
+.formElementLabel{
+    display:block;
 }
 
 .text-input:focus{
