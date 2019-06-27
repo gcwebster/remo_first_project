@@ -82,11 +82,11 @@ class Form extends React.Component {
                                         errors={errors.firstName}
                                         touched={touched.firstName}
                                     />
-                                </div>
 
-                                <div />
 
-                                <div className="centerFormElement">
+
+
+
 
                                     <FormElement
                                         type={"text"}
@@ -98,11 +98,11 @@ class Form extends React.Component {
                                         errors={errors.lastName}
                                         touched={touched.lastName}
                                     />
-                                </div>
 
-                                <div />
 
-                                <div className="centerFormElement">
+
+
+
 
                                     <FormElement
                                         type={"text"}
@@ -114,11 +114,11 @@ class Form extends React.Component {
                                         errors={errors.email}
                                         touched={touched.email}
                                     />
-                                </div>
 
-                                <div />
 
-                                <div className="centerFormElement">
+
+
+
                                     <FormElement
                                         type={"text"}
                                         elementId={"age"}
@@ -129,11 +129,11 @@ class Form extends React.Component {
                                         errors={errors.age}
                                         touched={touched.age}
                                     />
-                                </div>
 
-                                <div />
 
-                                <div className="centerFormElement">
+
+
+
                                     <FormElement
                                         type={"dropdown"}
                                         elementId={"gender"}
@@ -149,11 +149,11 @@ class Form extends React.Component {
                                             "Female"
                                         ]}
                                     />
-                                </div>
 
-                                <div />
 
-                                <div className="centerFormElement">
+
+
+
                                     <FormElement
                                         type="radio"
                                         elementId={"hobbies"}
@@ -171,11 +171,11 @@ class Form extends React.Component {
                                             "Polo"
                                         ]}
                                     />
-                                </div>
 
-                                <div />
 
-                                <div className="centerFormElement">
+
+
+
                                     <FormElement
                                         type={"checkbox"}
                                         elementId={"signUp"}
@@ -193,11 +193,11 @@ class Form extends React.Component {
                                             "None"
                                         ]}
                                     />
-                                </div>
 
-                                <div />
 
-                                <div className="centerFormElement">
+
+
+
                                     <FormElement
                                         type={"checkbox"}
                                         elementId={"terms"}
@@ -212,11 +212,13 @@ class Form extends React.Component {
                                             "I agree to the terms and conditions"
                                         ]}
                                     />
-                                </div>
 
-                                <div />
 
-                                <div className="centerFormElement">
+
+
+
+
+
                                     <button
                                         type="button"
                                         className="outline"

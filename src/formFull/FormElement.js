@@ -8,12 +8,11 @@ import { FormTextInputElement } from "./FormInputElements/FormTextInputElement";
 
 function FormElement(props) {
     return (
-        <>
+        <div className="formElement">
             <FormElementLabel elementId={props.elementId} title={props.title} />
             {displayCorrectElement(props)}
             <FormElementError errors={props.errors} touched={props.touched} />
-        </>
-
+        </div>
     )
 }
 
