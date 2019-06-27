@@ -1,56 +1,54 @@
-.formikDisplayProps{
+.formikDisplayProps {
     background-color: lightgray;
     color: blue;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-.centerFormElement{
+.centerFormElement {
     text-align: center;
-    select{
-        display: inline-block;
-    }
+    background-color: rgb(160, 160, 241);
+    max-width:400px;
+    min-width:200px;
+    margin: auto;
 }
 
-
-.formElement{
+.formElement {
     padding: 10px 0;
     display: block;
-    input[type="radio"]{
-        vertical-align: middle;
+    width: 80%;
+    @media screen and (max-width: 450px){
+        width: 100%
+    }
+    margin: auto;
+
+    input[type="text"],
+    div {
+        width: 80%;
+        display: inline-block;
+        text-align: left;
     }
 }
 
-.formElementLabel{
-    display:block;
+
+.formElementLabel {
+    display: block;
+    text-decoration: underline;
 }
 
-
-.text-input:focus{
+.text-input:focus {
     border: 1px solid blue;
 }
 
-.text-input.error{
+.text-input.error {
     border: 2px solid red;
 }
 
-.input-feedback{
+.input-feedback {
     color:red;
     background-color:white
 }
 
-.testParent{
-    background-color: green;
-    display: block;
-    text-align: center;
-}
 
-.radioFormElement, .checkboxFormElement{
-    div{
-        text-align: left;
-        width: 150px;
-        margin: auto;
-    }
-}
