@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const DisplayFormikState = props =>
-    <div className={`formikDisplayProps + ${props.display ? "" : "hidden"}`}>
+    <div className={`formikDisplayProps + ${props.display ? '' : 'hidden'}`}>
         <h3 style={{ fontFamily: 'monospace' }}>Formik props:</h3>
         <pre
             style={{

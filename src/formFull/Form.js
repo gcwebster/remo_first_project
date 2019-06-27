@@ -1,5 +1,5 @@
 import '../styles/form.scss';
-import React from "react";
+import React from 'react';
 import { DisplayFormikState } from './helper';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -73,9 +73,9 @@ class Form extends React.Component {
                             <form onSubmit={handleSubmit}>
                                 <div className="centerFormElement">
                                     <FormElement
-                                        type={"text"}
-                                        elementId={"firstName"}
-                                        title={"First name"}
+                                        type={'text'}
+                                        elementId={'firstName'}
+                                        title={'First name'}
                                         values={values.firstName}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}
@@ -84,14 +84,10 @@ class Form extends React.Component {
                                     />
 
 
-
-
-
-
                                     <FormElement
-                                        type={"text"}
-                                        elementId={"lastName"}
-                                        title={"Last name"}
+                                        type={'text'}
+                                        elementId={'lastName'}
+                                        title={'Last name'}
                                         values={values.lastName}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}
@@ -100,14 +96,10 @@ class Form extends React.Component {
                                     />
 
 
-
-
-
-
                                     <FormElement
-                                        type={"text"}
-                                        elementId={"email"}
-                                        title={"Email"}
+                                        type={'text'}
+                                        elementId={'email'}
+                                        title={'Email'}
                                         values={values.email}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}
@@ -116,13 +108,10 @@ class Form extends React.Component {
                                     />
 
 
-
-
-
                                     <FormElement
-                                        type={"text"}
-                                        elementId={"age"}
-                                        title={"Age"}
+                                        type={'text'}
+                                        elementId={'age'}
+                                        title={'Age'}
                                         values={values.age}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}
@@ -131,92 +120,75 @@ class Form extends React.Component {
                                     />
 
 
-
-
-
                                     <FormElement
-                                        type={"dropdown"}
-                                        elementId={"gender"}
-                                        title={"Gender"}
-                                        label={"Select your gender"}
+                                        type={'dropdown'}
+                                        elementId={'gender'}
+                                        title={'Gender'}
+                                        label={'Select your gender'}
                                         values={values.gender}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}
                                         errors={errors.gender}
                                         touched={touched.gender}
                                         options={[
-                                            "Male",
-                                            "Female"
+                                            'Male',
+                                            'Female'
                                         ]}
                                     />
 
 
-
-
-
                                     <FormElement
                                         type="radio"
-                                        elementId={"hobbies"}
-                                        title={"Hobbies"}
-                                        radioButtonGroup={"hobbies"}
+                                        elementId={'hobbies'}
+                                        title={'Hobbies'}
+                                        radioButtonGroup={'hobbies'}
                                         values={values.hobbies}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}
                                         errors={errors.hobbies}
                                         touched={touched.hobbies}
                                         options={[
-                                            "Kayaking",
-                                            "Swimming",
-                                            "Airsoft",
-                                            "Polo"
+                                            'Kayaking',
+                                            'Swimming',
+                                            'Airsoft',
+                                            'Polo'
                                         ]}
                                     />
 
 
-
-
-
                                     <FormElement
-                                        type={"checkbox"}
-                                        elementId={"signUp"}
-                                        title={"Sign up"}
-                                        checkboxButtonGroup={"signUp"}
+                                        type={'checkbox'}
+                                        elementId={'signUp'}
+                                        title={'Sign up'}
+                                        checkboxButtonGroup={'signUp'}
                                         values={values.signUp}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}
                                         errors={errors.signUp}
                                         touched={touched.signUp}
                                         options={[
-                                            "Email",
-                                            "Mail",
-                                            "Text",
-                                            "None"
+                                            'Email',
+                                            'Mail',
+                                            'Text',
+                                            'None'
                                         ]}
                                     />
 
 
-
-
-
                                     <FormElement
-                                        type={"checkbox"}
-                                        elementId={"terms"}
-                                        title={"Terms and conditions"}
-                                        checkboxButtonGroup={"terms"}
+                                        type={'checkbox'}
+                                        elementId={'terms'}
+                                        title={'Terms and conditions'}
+                                        checkboxButtonGroup={'terms'}
                                         values={values.terms}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}
                                         errors={errors.terms}
                                         touched={touched.terms}
                                         options={[
-                                            "I agree to the terms and conditions"
+                                            'I agree to the terms and conditions'
                                         ]}
                                     />
-
-
-
-
-
 
 
                                     <button
@@ -232,7 +204,7 @@ class Form extends React.Component {
                                     </button>
                                     <div />
                                     <button onClick={() => this.setState({ show: !this.state.show })}>
-                                        {this.state.show ? "Hide" : "Show"} current form state
+                                        {this.state.show ? 'Hide' : 'Show'} current form state
                                     </button>
                                 </div>
 

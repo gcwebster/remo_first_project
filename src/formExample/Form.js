@@ -1,5 +1,5 @@
 import '../styles/form.scss';
-import React from "react";
+import React from 'react';
 import { DisplayFormikState } from './helper';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -77,7 +77,7 @@ class FormExample extends React.Component {
                                 </button>
                                 <div />
                                 <button onClick={() => this.setState({ show: !this.state.show })}>
-                                    {this.state.show ? "Hide" : "Show"} current form state
+                                    {this.state.show ? 'Hide' : 'Show'} current form state
                                 </button>
                                 <DisplayFormikState {...props} display={this.state.show} />
                             </form>

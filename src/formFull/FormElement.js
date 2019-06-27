@@ -1,10 +1,10 @@
-import { FormElementLabel } from "./FormElementLabel";
-import { FormElementError } from "./FormElementError";
+import { FormElementLabel } from './FormElementLabel';
+import { FormElementError } from './FormElementError';
 
 import { FormCheckboxInputElement } from './FormInputElements/FormCheckboxInputElement'
-import { FormRadioInputElement } from "./FormInputElements/FormRadioInputElement";
-import { FormDropdownInputElement } from "./FormInputElements/FormDropdownInputElement";
-import { FormTextInputElement } from "./FormInputElements/FormTextInputElement";
+import { FormRadioInputElement } from './FormInputElements/FormRadioInputElement';
+import { FormDropdownInputElement } from './FormInputElements/FormDropdownInputElement';
+import { FormTextInputElement } from './FormInputElements/FormTextInputElement';
 
 function FormElement(props) {
     return (
@@ -18,14 +18,14 @@ function FormElement(props) {
 
 function displayCorrectElement(props) {
     switch (props.type) {
-        case "checkbox":
-            return (<FormCheckboxInputElement {...props} />);
-        case "radio":
-            return (<FormRadioInputElement {...props} />);
-        case "dropdown":
-            return (<FormDropdownInputElement {...props} />);
-        case "text":
-            return (<FormTextInputElement {...props} />);
+    case 'checkbox':
+        return (<FormCheckboxInputElement {...props} />);
+    case 'radio':
+        return (<FormRadioInputElement {...props} />);
+    case 'dropdown':
+        return (<FormDropdownInputElement {...props} />);
+    case 'text':
+        return (<FormTextInputElement {...props} />);
     }
 }
 
