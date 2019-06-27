@@ -1,10 +1,10 @@
 import { FormElementLabel } from "./FormElementLabel";
 import { FormElementError } from "./FormElementError";
 
-import { FormCheckboxInputElement } from './FormCheckboxInputElement'
-import { FormRadioInputElement } from "./FormRadioInputElement";
-import { FormDropdownInputElement } from "./FormDropdownInputElement";
-import { FormTextInputElement } from "./FormTextInputElement";
+import { FormCheckboxInputElement } from './FormInputElements/FormCheckboxInputElement'
+import { FormRadioInputElement } from "./FormInputElements/FormRadioInputElement";
+import { FormDropdownInputElement } from "./FormInputElements/FormDropdownInputElement";
+import { FormTextInputElement } from "./FormInputElements/FormTextInputElement";
 
 function FormElement(props) {
     return (
