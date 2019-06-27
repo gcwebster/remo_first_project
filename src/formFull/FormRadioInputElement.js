@@ -5,9 +5,7 @@ function FormRadioInputElement(props) {
     return (
         <>
             <FormElementLabel elementId={props.elementId} title={props.title} />
-
             {displayRadioButtons(props)}
-
             <FormElementError errors={props.errors} touched={props.touched} />
 
         </>
@@ -21,7 +19,7 @@ function displayRadioButtons(props) {
             <div>
                 <input
                     type="radio"
-                    name={props.name}
+                    name={props.radioButtonGroup}
                     value={props.options[i]}
                     onChange={props.handleChange}
                     onBlur={props.handleBlur}

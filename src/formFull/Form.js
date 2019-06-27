@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 import { FormTextInputElement } from './FormTextInputElement';
 import { FormDropdownInputElement } from './FormDropdownInputElement';
 import { FormRadioInputElement } from './FormRadioInputElement';
+import { FormCheckboxInputElement } from './FormCheckboxInputElement';
 
 /*
 ToDo:
@@ -51,7 +52,11 @@ class Form extends React.Component {
                         gender: Yup.string()
                             .required('Select your gender'),
                         hobbies: Yup.string()
-                            .required('Select your hobbies')
+                            .required('Select your hobbies'),
+                        signUp: Yup.string()
+                            .required('Select your signUp'),
+                        terms: Yup.boolean()
+                            .oneOf([true], 'Must accept our terms and conditions')
 
                     })}
                 >
@@ -69,101 +74,161 @@ class Form extends React.Component {
                         } = props;
                         return (
                             <form onSubmit={handleSubmit}>
-                                <FormTextInputElement
-                                    elementId={"firstName"}
-                                    title={"First name"}
-                                    values={values.firstName}
-                                    handleChange={handleChange}
-                                    handleBlur={handleBlur}
-                                    errors={errors.firstName}
-                                    touched={touched.firstName}
-                                />
+                                <div className="centerFormElement">
+                                    <FormTextInputElement
+                                        elementId={"firstName"}
+                                        title={"First name"}
+                                        values={values.firstName}
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        errors={errors.firstName}
+                                        touched={touched.firstName}
+                                    />
+                                </div>
+
                                 <div />
 
-                                <FormTextInputElement
-                                    elementId={"lastName"}
-                                    title={"Last name"}
-                                    values={values.lastName}
-                                    handleChange={handleChange}
-                                    handleBlur={handleBlur}
-                                    errors={errors.lastName}
-                                    touched={touched.lastName}
-                                />
+                                <div className="centerFormElement">
+
+                                    <FormTextInputElement
+                                        elementId={"lastName"}
+                                        title={"Last name"}
+                                        values={values.lastName}
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        errors={errors.lastName}
+                                        touched={touched.lastName}
+                                    />
+                                </div>
+
                                 <div />
 
-                                <FormTextInputElement
-                                    elementId={"email"}
-                                    title={"Email"}
-                                    values={values.email}
-                                    handleChange={handleChange}
-                                    handleBlur={handleBlur}
-                                    errors={errors.email}
-                                    touched={touched.email}
-                                />
+                                <div className="centerFormElement">
+
+                                    <FormTextInputElement
+                                        elementId={"email"}
+                                        title={"Email"}
+                                        values={values.email}
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        errors={errors.email}
+                                        touched={touched.email}
+                                    />
+                                </div>
+
                                 <div />
 
-                                <FormTextInputElement
-                                    elementId={"age"}
-                                    title={"Age"}
-                                    values={values.age}
-                                    handleChange={handleChange}
-                                    handleBlur={handleBlur}
-                                    errors={errors.age}
-                                    touched={touched.age}
-                                />
+                                <div className="centerFormElement">
+                                    <FormTextInputElement
+                                        elementId={"age"}
+                                        title={"Age"}
+                                        values={values.age}
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        errors={errors.age}
+                                        touched={touched.age}
+                                    />
+                                </div>
+
                                 <div />
 
-                                <FormDropdownInputElement
-                                    elementId={"gender"}
-                                    title={"Gender"}
-                                    label={"Select your gender"}
-                                    values={values.gender}
-                                    handleChange={handleChange}
-                                    handleBlur={handleBlur}
-                                    errors={errors.gender}
-                                    touched={touched.gender}
-                                    options={[
-                                        "Male",
-                                        "Female"
-                                    ]}
-                                />
+                                <div className="centerFormElement">
+                                    <FormDropdownInputElement
+                                        elementId={"gender"}
+                                        title={"Gender"}
+                                        label={"Select your gender"}
+                                        values={values.gender}
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        errors={errors.gender}
+                                        touched={touched.gender}
+                                        options={[
+                                            "Male",
+                                            "Female"
+                                        ]}
+                                    />
+                                </div>
+
                                 <div />
 
-                                <FormRadioInputElement
-                                    elementId={"hobbies"}
-                                    title={"Hobbies"}
-                                    label={"Select your hobbies"}
-                                    values={values.hobbies}
-                                    handleChange={handleChange}
-                                    handleBlur={handleBlur}
-                                    errors={errors.hobbies}
-                                    touched={touched.hobbies}
-                                    name={"hobbies"}
-                                    options={[
-                                        "kayaking",
-                                        "swimming",
-                                        "airsoft",
-                                        "polo"
-                                    ]}
-                                />
+                                <div className="centerFormElement">
+                                    <FormRadioInputElement
+                                        elementId={"hobbies"}
+                                        title={"Hobbies"}
+                                        radioButtonGroup={"hobbies"}
+                                        values={values.hobbies}
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        errors={errors.hobbies}
+                                        touched={touched.hobbies}
+                                        options={[
+                                            "Kayaking",
+                                            "Swimming",
+                                            "Airsoft",
+                                            "Polo"
+                                        ]}
+                                    />
+                                </div>
+
                                 <div />
 
+                                <div className="centerFormElement">
+                                    <FormCheckboxInputElement
+                                        elementId={"signUp"}
+                                        title={"Sign up"}
+                                        checkboxButtonGroup={"signUp"}
+                                        values={values.signUp}
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        errors={errors.signUp}
+                                        touched={touched.signUp}
+                                        options={[
+                                            "Email",
+                                            "Mail",
+                                            "Text",
+                                            "None"
+                                        ]}
+                                    />
+                                </div>
 
-                                <button
-                                    type="button"
-                                    className="outline"
-                                    onClick={handleReset}
-                                    disabled={!dirty || isSubmitting}
-                                >
-                                    Reset
-                                </button>
-                                <button type="submit" disabled={isSubmitting}>
-                                    Submit
-                                </button>
                                 <div />
-                                <button onClick={() => this.setState({ show: !this.state.show })}>
-                                    {this.state.show ? "Hide" : "Show"} current form state
-                                </button>
+
+                                <div className="centerFormElement">
+                                    <FormCheckboxInputElement
+                                        elementId={"terms"}
+                                        title={"Terms and conditions"}
+                                        checkboxButtonGroup={"terms"}
+                                        values={values.terms}
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        errors={errors.terms}
+                                        touched={touched.terms}
+                                        options={[
+                                            "I agree to the terms and conditions"
+                                        ]}
+                                    />
+                                </div>
+
+                                <div />
+
+                                <div className="centerFormElement">
+                                    <button
+                                        type="button"
+                                        className="outline"
+                                        onClick={handleReset}
+                                        disabled={!dirty || isSubmitting}
+                                    >
+                                        Reset
+                                    </button>
+                                    <button type="submit" disabled={isSubmitting}>
+                                        Submit
+                                    </button>
+                                    <div />
+                                    <button onClick={() => this.setState({ show: !this.state.show })}>
+                                        {this.state.show ? "Hide" : "Show"} current form state
+                                    </button>
+                                </div>
+
                                 <DisplayFormikState {...props} display={this.state.show} />
                             </form>
                         );

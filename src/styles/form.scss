@@ -7,10 +7,20 @@
     display: none;
 }
 
+.centerFormElement{
+    text-align: center;
+}
+
+.centerFormElement select{
+    display: inline-block;
+}
+
+
 .text-input:focus{
     border: 1px solid blue;
 
 }
+
 
 .text-input.error{
     border: 2px solid red;
