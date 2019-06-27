@@ -61,7 +61,30 @@
     color:red;
     background-color:white;
     text-align: center;
+}
 
+.submitButton,
+.resetButton {
+    border-radius: 30px;
+    padding: 20px;
+    border: none;
+    font-size: 20px;
+}
+
+.submitButton {
+    color: white;
+    background-color: rgb(3, 238, 3);
+}
+
+.resetButton {
+    color: white;
+    background-color: red;
+}
+
+.submitButton:disabled,
+.resetButton:disabled {
+    color: grey;
+    background-color: lightgrey;
 }
 
 

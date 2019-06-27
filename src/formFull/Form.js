@@ -8,13 +8,12 @@ import { FormElement } from './FormElement';
 /*
 ToDo:
 - Fix bug where on reset button click page disappears.
-- Disable submit button until all criteria is met.
 */
 class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: true
+            show: false
         }
     }
 
@@ -180,25 +179,25 @@ class Form extends React.Component {
                                     />
 
                                     <button
+                                        className="resetButton"
                                         type="button"
-                                        className="outline"
                                         onClick={handleReset}
                                         disabled={!dirty || isSubmitting}
                                     >
                                         Reset
                                     </button>
                                     <button
+                                        className="submitButton"
                                         type="submit"
                                         disabled={isSubmitting || !dirty || dirty && (!isEmpty(errors))}
                                     >
                                         Submit
                                     </button>
                                     <div />
-                                    <button onClick={() => this.setState({ show: !this.state.show })}>
-                                        {this.state.show ? 'Hide' : 'Show'} current form state
-                                    </button>
                                 </div>
-
+                                <button onClick={() => this.setState({ show: !this.state.show })}>
+                                    {this.state.show ? 'Hide' : 'Show'} current form state
+                                </button>
                                 <DisplayFormikState {...props} display={this.state.show} />
                             </form>
                         );
