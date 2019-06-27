@@ -6,6 +6,7 @@ import { FormRadioInputElement } from './FormInputElements/FormRadioInputElement
 import { FormDropdownInputElement } from './FormInputElements/FormDropdownInputElement';
 import { FormTextInputElement } from './FormInputElements/FormTextInputElement';
 import { FormNumericalInputElement } from './FormInputElements/FormNumericalInputElement';
+import { FormElementTermsAndConditions } from './FormInputElements/FormElementTermsAndConditions';
 
 function FormElement(props) {
     return (
@@ -29,6 +30,8 @@ function displayCorrectElement(props) {
             return (<FormTextInputElement {...props} />);
         case 'number':
             return (<FormNumericalInputElement {...props} />);
+        case 'terms':
+            return (<FormElementTermsAndConditions {...props} />);
     }
 }
 

@@ -8,6 +8,7 @@ import { FormElement } from './FormElement';
 /*
 ToDo:
 - Fix bug where on reset button click page disappears.
+- Disable submit button until all criteria is met.
 */
 class Form extends React.Component {
     constructor(props) {
@@ -48,12 +49,9 @@ class Form extends React.Component {
                             .required(' Age is required'),
                         gender: Yup.string()
                             .required('Select your gender'),
-                        hobbies: Yup.string()
-                            .required('Select your hobbies'),
-                        signUp: Yup.string()
-                            .required('Select your signUp'),
                         terms: Yup.boolean()
                             .oneOf([true], 'Must accept our terms and conditions')
+                            .required('You must accept our terms and conditions')
 
                     })}
                 >
@@ -133,10 +131,10 @@ class Form extends React.Component {
                                     />
 
                                     <FormElement
-                                        type="radio"
+                                        type="checkbox"
                                         elementId={'hobbies'}
                                         title={'Hobbies'}
-                                        radioButtonGroup={'hobbies'}
+                                        checkboxButtonGroup={'hobbies'}
                                         values={values.hobbies}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}
@@ -151,10 +149,10 @@ class Form extends React.Component {
                                     />
 
                                     <FormElement
-                                        type={'checkbox'}
+                                        type={'radio'}
                                         elementId={'signUp'}
                                         title={'Sign up'}
-                                        checkboxButtonGroup={'signUp'}
+                                        radioButtonGroup={'signUp'}
                                         values={values.signUp}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}
@@ -169,7 +167,7 @@ class Form extends React.Component {
                                     />
 
                                     <FormElement
-                                        type={'checkbox'}
+                                        type={'terms'}
                                         elementId={'terms'}
                                         title={'Terms and conditions'}
                                         checkboxButtonGroup={'terms'}
@@ -178,9 +176,7 @@ class Form extends React.Component {
                                         handleBlur={handleBlur}
                                         errors={errors.terms}
                                         touched={touched.terms}
-                                        options={[
-                                            'I agree to the terms and conditions'
-                                        ]}
+                                        option={'I agree to the terms and conditions'}
                                     />
 
                                     <button
@@ -191,7 +187,10 @@ class Form extends React.Component {
                                     >
                                         Reset
                                     </button>
-                                    <button type="submit" disabled={isSubmitting}>
+                                    <button
+                                        type="submit"
+                                        disabled={isSubmitting || !dirty || dirty && (!isEmpty(errors))}
+                                    >
                                         Submit
                                     </button>
                                     <div />
@@ -208,6 +207,10 @@ class Form extends React.Component {
             </div >
         )
     }
+}
+
+function isEmpty(object) {
+    return Object.getOwnPropertyNames(object).length === 0;
 }
 
 export { Form }
