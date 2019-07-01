@@ -18,6 +18,7 @@ function displayRadioButtons(props) {
                     value={props.options[i]}
                     onChange={props.handleChange}
                     onBlur={props.handleBlur}
+                    checked={props.values === props.options[i] ? true : false}
                 />
 
                 <label for={props.options[i]}>
