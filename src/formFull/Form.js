@@ -7,7 +7,8 @@ import { FormElement } from './FormElement';
 
 /*
 ToDo:
-- Fix bug where on reset button click page disappears.
+- Fix bug where on reset button click page disappears. FIXED WITH initialValues BUT THIS CAN CAUSE OTHER PROBLEMS
+- On reset checked boxes should return to unchecked
 */
 class Form extends React.Component {
     constructor(props) {
@@ -24,6 +25,7 @@ class Form extends React.Component {
                 <p>Try to enter an email below:</p>
 
                 <Formik
+                    initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', Kayaking: '', Swimming: '', Airsoft: '', Polo: '', signUp: '', terms: '' }}
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
                             alert(JSON.stringify(values, null, 2));
@@ -68,6 +70,8 @@ class Form extends React.Component {
                         } = props;
                         return (
                             <form onSubmit={handleSubmit}>
+                                {/* {console.log(handleSubmit)}
+                                {console.log(handleReset)} */}
                                 <div className="centerFormElement">
                                     <FormElement
                                         type={'text'}
