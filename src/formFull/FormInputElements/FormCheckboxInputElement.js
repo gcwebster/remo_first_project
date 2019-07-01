@@ -9,19 +9,18 @@ function FormCheckboxInputElement(props) {
 function displayCheckboxes(props) {
     var checkboxes = [];
     for (var i = 0; i < props.options.length; i++) {
+        var title = props.category + "." + props.options[i];
         checkboxes.push(
             <div>
                 <input
                     type="checkbox"
-                    name={props.checkboxButtonGroup}
+                    name={title}
                     value={props.options[i]}
                     onChange={props.handleChange}
                     onBlur={props.handleBlur}
-                    checked={props.options[i] == "Polo" || props.options[i] == false ? false : true}
+                    checked={props.values[props.options[i]] == true ? true : false}
                 />
                 {props.options[i]}
-                <h1>values: {props.values}</h1>
-                {console.log(props.values)}
             </div>
         )
     }

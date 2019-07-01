@@ -14,7 +14,7 @@ class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: false
+            show: true
         }
     }
 
@@ -25,7 +25,8 @@ class Form extends React.Component {
                 <p>Try to enter an email below:</p>
 
                 <Formik
-                    initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', Kayaking: '', Swimming: '', Airsoft: '', Polo: '', signUp: '', terms: '' }}
+                    // initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', Kayaking: 'false', Swimming: 'false', Airsoft: 'false', Polo: 'false', signUp: '', terms: '' }}
+                    initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', signUp: '', terms: '', hobbies: '' }}
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
                             alert(JSON.stringify(values, null, 2));
@@ -137,7 +138,7 @@ class Form extends React.Component {
                                         type="checkbox"
                                         elementId={'hobbies'}
                                         title={'Hobbies'}
-                                        checkboxButtonGroup={'hobbies'}
+                                        category={'hobbies'}
                                         values={values.hobbies}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}

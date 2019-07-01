@@ -7,6 +7,7 @@ function FormElementTermsAndConditions(props) {
                 value="terms"
                 onChange={props.handleChange}
                 onBlur={props.handleBlur}
+                checked={props.values == true ? true : false}
             />
             {props.option}
         </div>
