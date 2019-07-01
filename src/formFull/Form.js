@@ -156,7 +156,7 @@ class Form extends React.Component {
                                         type={'radio'}
                                         elementId={'signUp'}
                                         title={'Sign up'}
-                                        radioButtonGroup={'signUp'}
+                                        category={'signUp'}
                                         values={values.signUp}
                                         handleChange={handleChange}
                                         handleBlur={handleBlur}

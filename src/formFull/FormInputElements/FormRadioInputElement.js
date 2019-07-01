@@ -13,7 +13,7 @@ function displayRadioButtons(props) {
             <div>
                 <input
                     type="radio"
-                    name={props.radioButtonGroup}
+                    name={props.category}
                     id={props.options[i]}
                     value={props.options[i]}
                     onChange={props.handleChange}
