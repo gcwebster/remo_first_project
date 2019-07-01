@@ -1,16 +1,14 @@
 function FormDropdownInputElement(props) {
     return (
-        <>
-            <select
-                name={props.elementId}
-                value={props.values}
-                onChange={props.handleChange}
-                onBlur={props.handleBlur}
-            >
-                <option value="" label={props.label} />
-                {displayOptions(props.options)}
-            </select>
-        </>
+        <select
+            name={props.elementId}
+            value={props.values}
+            onChange={props.handleChange}
+            onBlur={props.handleBlur}
+        >
+            <option value="" label={props.label} />
+            {displayOptions(props.options)}
+        </select>
     )
 }
 
