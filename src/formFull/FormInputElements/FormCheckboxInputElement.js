@@ -15,10 +15,9 @@ function displayCheckboxes(props) {
         * e.g. hobbies would only be created once Kayaking (or other) was selected, meaning props.category.[props.options[i]] couldn't find anything
         * Now it can go into the category since it exists (even if empty) and determine that the specific element doesn't exist (returns undefined instead of error)
         */
-
         var title = props.category + "." + props.options[i];
         checkboxes.push(
-            <div>
+            <div key={`${props.elementId}-${i}`}>
                 <input
                     type="checkbox"
                     name={title}

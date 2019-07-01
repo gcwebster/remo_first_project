@@ -5,11 +5,6 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { FormElement } from './FormElement';
 
-/*
-ToDo:
-- Fix bug where on reset button click page disappears. FIXED WITH initialValues BUT THIS CAN CAUSE OTHER PROBLEMS
-- On reset checked boxes should return to unchecked
-*/
 class Form extends React.Component {
     constructor(props) {
         super(props);
