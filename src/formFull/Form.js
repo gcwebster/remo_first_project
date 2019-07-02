@@ -16,8 +16,7 @@ class Form extends React.Component {
     render() {
         return (
             <div>
-                <h2>This form will validate an email using Formik</h2>
-                <p>Try to enter an email below:</p>
+                <h2 className="formikTitle">Member sign up form using formik using Formik</h2>
 
                 <Formik
                     // initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', Kayaking: 'false', Swimming: 'false', Airsoft: 'false', Polo: 'false', signUp: '', terms: '' }}
