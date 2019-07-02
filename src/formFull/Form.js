@@ -17,9 +17,7 @@ class Form extends React.Component {
         return (
             <div>
                 <h2 className="formikTitle">Member sign up form using formik using Formik</h2>
-
                 <Formik
-                    // initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', Kayaking: 'false', Swimming: 'false', Airsoft: 'false', Polo: 'false', signUp: '', terms: '' }}
                     initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', signUp: '', terms: '', hobbies: {} }}
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
@@ -65,8 +63,6 @@ class Form extends React.Component {
                         } = props;
                         return (
                             <form onSubmit={handleSubmit}>
-                                {/* {console.log(handleSubmit)}
-                                {console.log(handleReset)} */}
                                 <div className="centerFormElement">
                                     <FormElement
                                         type={'text'}
