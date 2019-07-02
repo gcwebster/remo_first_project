@@ -21,7 +21,7 @@ function displayRadioButtons(props) {
                     checked={props.values === props.options[i] ? true : false}
                 />
 
-                <label for={props.options[i]}>
+                <label htmlFor={props.options[i]}>
                     {props.options[i]}
                 </label>
             </div>)
