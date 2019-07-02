@@ -20,7 +20,7 @@ class Form extends React.Component {
 
                 <Formik
                     // initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', Kayaking: 'false', Swimming: 'false', Airsoft: 'false', Polo: 'false', signUp: '', terms: '' }}
-                    initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', signUp: '', terms: '', hobbies: '' }}
+                    initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', signUp: '', terms: '', hobbies: {} }}
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
                             alert(JSON.stringify(values, null, 2));
