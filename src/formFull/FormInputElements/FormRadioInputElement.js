@@ -10,7 +10,7 @@ function displayRadioButtons(props) {
     var radioButtons = [];
     for (var i = 0; i < props.options.length; i++) {
         radioButtons.push(
-            <div>
+            <div key={`${props.elementId}-${i}`}>
                 <input
                     type="radio"
                     name={props.category}

@@ -7,15 +7,20 @@ function FormDropdownInputElement(props) {
             onBlur={props.handleBlur}
         >
             <option value="" label={props.label} />
-            {displayOptions(props.options)}
+            {displayOptions(props.options, props.elementId)}
         </select>
     )
 }
 
-function displayOptions(options) {
+function displayOptions(options, elementId) {
     var arrayOfOptions = [];
     for (var i = 0; i < options.length; i++) {
-        arrayOfOptions.push(<option value={options[i]} label={options[i]} />);
+        arrayOfOptions.push(
+            <option
+                key={`${elementId}-${i}`}
+                value={options[i]}
+                label={options[i]} />
+        );
     }
     return arrayOfOptions;
 }
