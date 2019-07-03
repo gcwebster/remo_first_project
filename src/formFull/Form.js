@@ -184,7 +184,11 @@ class Form extends React.Component {
                                     <button
                                         className="submitButton"
                                         type="submit"
-                                        disabled={isSubmitting || !dirty || dirty && (!isEmpty(errors))}
+                                        disabled={
+                                            isSubmitting ||
+                                            !dirty ||
+                                            dirty && (!isEmpty(errors))
+                                        }
                                     >
                                         Submit
                                     </button>
