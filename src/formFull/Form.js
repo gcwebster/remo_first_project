@@ -19,9 +19,17 @@ class Form extends React.Component {
                 <h2 className="formikTitle">Member sign up form using formik using Formik</h2>
                 <Formik
                     initialValues={{ firstName: '', lastName: '', email: '', age: '', gender: '', signUp: '', terms: '', hobbies: {} }}
-                    onSubmit={(values, { setSubmitting }) => {
+                    id="registerUser"
+                    onSubmit={(formValues, { setSubmitting }) => {
                         setTimeout(() => {
-                            alert(JSON.stringify(values, null, 2));
+                            httpPost('http://localhost:8080/v2/user');
+                            function httpPost(theUrl) {
+                                var xmlHttp = new XMLHttpRequest();
+                                xmlHttp.open('POST', theUrl);
+                                xmlHttp.setRequestHeader('Content-type', 'application/json');
+                                xmlHttp.send(JSON.stringify(formValues));
+                                return xmlHttp;
+                            }
                             setSubmitting(false);
                         }, 500);
                     }}
