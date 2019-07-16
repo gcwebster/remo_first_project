@@ -25,7 +25,7 @@ class Form extends React.Component {
                             httpPost('http://localhost:8080/v2/user');
                             function httpPost(theUrl) {
                                 var xmlHttp = new XMLHttpRequest();
-                                xmlHttp.onreadystatechange = function () {
+                                xmlHttp.onreadystatechange = function() {
                                     if (xmlHttp.readyState === 4) {
                                         var apiResponse = xmlHttp.response;
                                         console.log(apiResponse);
