@@ -9,7 +9,7 @@ class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: true
+            show: false
         }
     }
 
@@ -27,7 +27,9 @@ class Form extends React.Component {
                                 var xmlHttp = new XMLHttpRequest();
                                 xmlHttp.onreadystatechange = function () {
                                     if (xmlHttp.readyState === 4) {
-                                        console.log(xmlHttp.response);
+                                        var apiResponse = xmlHttp.response;
+                                        console.log(apiResponse);
+                                        displayResult(apiResponse);
                                     }
                                 }
                                 xmlHttp.open('POST', theUrl);
@@ -205,8 +207,8 @@ class Form extends React.Component {
                                     >
                                         Submit
                                     </button>
-                                    <div />
                                 </div>
+
                                 <button onClick={() => this.setState({ show: !this.state.show })}>
                                     {this.state.show ? 'Hide' : 'Show'} current form state
                                 </button>
@@ -214,7 +216,9 @@ class Form extends React.Component {
                             </form>
                         );
                     }}
+
                 </Formik>
+                <div id="response" className='apiResponse hidden' />
             </div >
         )
     }
@@ -222,6 +226,10 @@ class Form extends React.Component {
 
 function isEmpty(object) {
     return Object.getOwnPropertyNames(object).length === 0;
+}
+
+function displayResult(response) {
+    document.getElementById('response').innerHTML = response;
 }
 
 export { Form }
