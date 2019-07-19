@@ -20,18 +20,18 @@ function FormElement(props) {
 
 function displayCorrectElement(props) {
     switch (props.type) {
-        case 'checkbox':
-            return (<FormCheckboxInputElement {...props} />);
-        case 'radio':
-            return (<FormRadioInputElement {...props} />);
-        case 'dropdown':
-            return (<FormDropdownInputElement {...props} />);
-        case 'text':
-            return (<FormTextInputElement {...props} />);
-        case 'number':
-            return (<FormNumericalInputElement {...props} />);
-        case 'terms':
-            return (<FormElementTermsAndConditions {...props} />);
+    case 'checkbox':
+        return (<FormCheckboxInputElement {...props} />);
+    case 'radio':
+        return (<FormRadioInputElement {...props} />);
+    case 'dropdown':
+        return (<FormDropdownInputElement {...props} />);
+    case 'text':
+        return (<FormTextInputElement {...props} />);
+    case 'number':
+        return (<FormNumericalInputElement {...props} />);
+    case 'terms':
+        return (<FormElementTermsAndConditions {...props} />);
     }
 }
 

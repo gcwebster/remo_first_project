@@ -218,7 +218,7 @@ class Form extends React.Component {
                     }}
 
                 </Formik>
-                <div id="response" className='apiResponse hidden' />
+                <div id="response" className='apiResponse' />
             </div >
         )
     }
